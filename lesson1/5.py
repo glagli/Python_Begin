@@ -9,6 +9,7 @@
 gain = float(input('Введите выручку фирмы: '))
 cost = float(input('Введите издержеки фирмы: '))
 
+<<<<<<< HEAD
 if gain >= cost:
     print('прибыль')
     print(f'Рентабельность: {((gain - cost) / gain):.2f}')
@@ -20,3 +21,10 @@ if gain >= cost:
     print(f'прибыль фирмы в расчете на одного сотрудника: {((gain - cost) / number):.2f}')
 else:
     print('Работала с убытком')
+=======
+
+print('прибыль' if gain >= cost else 'убыток')
+print('Рентабельность: ', round((gain-cost)/gain, 3) if gain > cost else 'Фирма отработала с убытком')
+number = int(input('Введите численность сотрудников фирмы: '))
+print('прибыль фирмы в расчете на одного сотрудника: ', (gain-cost)/number if gain >= cost else 'Работала с убытком')
+>>>>>>> lesson1

@@ -18,8 +18,15 @@ b = int(input('Желаемый результат: '))
 count = 1
 
 while a <= b:
+<<<<<<< HEAD
     print(f'{count}-й день: {a:.2f}')
     count += 1
     a = a + (a * 0.1)
 print(f'{count}-й день: {a:.2f}')
+=======
+    print('{}-й день: {}'.format(count, round(a, 2)))
+    count += 1
+    a = a + (a * 0.1)
+print('{}-й день: {}'.format(count, round(a, 2)))
+>>>>>>> lesson1
 print('Ответ: на {}-й день спортсмен достиг результата — не менее {} км.'.format(count, b))
