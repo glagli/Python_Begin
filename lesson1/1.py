@@ -15,12 +15,9 @@ f = True
 print(type(f), f)
 j = (1, 2, [1, 2], 'one')
 print(type(j), j)
-
 h = input('Введите любое слово: ')
 print(type(h), h)
-
 i = int(input('Введите любое целое число: '))
 print(type(i), i)
-
-g = float(input('Введите любое дробное число: '))
+g = float(input('Введите дробное число  в формате 0.0: '))
 print(type(g), g)
