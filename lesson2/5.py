@@ -8,11 +8,12 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2]
 
+# number = float(input('Введите число: '))
 number = int(input('Введите число: '))
 myList = [8, 7, 5, 3, 3]
 
 if number in myList:
-    myList.insert(myList.index(number), number)
+    myList.insert(myList.index(number) + myList.count(number), number)
 else:
     for elm in myList:
         if number > elm:
