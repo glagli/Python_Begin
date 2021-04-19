@@ -26,14 +26,17 @@ class Position(Worker):
 person1 = Position("Vlad", "Glagolev", "engineer", 50550)
 print(person1.get_full_name())
 print(person1._income)
+print(person1.fullNameEmployee[2])
 print(person1.get_total_income())
 
 person2 = Position("Oleg", "Zemskov", "director", 102000.22, 1)
 print(person2.get_full_name())
 print(person2._income)
+print(person2.fullNameEmployee[2])
 print(person2.get_total_income())
 
 person3 = Position("Maria", "Barinova", "analyst", 75050.55, 0.7)
 print(person3.get_full_name())
 print(person3._income)
+print(person3.fullNameEmployee[2])
 print(person3.get_total_income())
