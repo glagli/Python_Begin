@@ -16,6 +16,7 @@ import json
 
 myList = []
 listFirm = []
+cont = 0
 s = 0
 finalList = []
 with open('my_file.txt', 'r', encoding='utf-8') as f:
@@ -26,8 +27,9 @@ with open('my_file.txt', 'r', encoding='utf-8') as f:
     finalList.append(profit)
     for item in myList:
         if ((int(item.split()[2])) - int(item.split()[3])) > 0:
+            cont += 1
             s += (int(item.split()[2])) - int(item.split()[3])
-    averageProfit = {'average_profit': s}
+    averageProfit = {'average_profit': s/cont}
     finalList.append(averageProfit)
     print(finalList)
 with open('json_file.json', 'w', encoding='utf-8') as f:
