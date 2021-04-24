@@ -41,9 +41,9 @@ class coat(clothes):
 class suit(clothes):
     @property
     def expense(self):
-        return round((self.parameter * 2 + 0.3)/100)
+        return round(self.parameter * 2 + 0.3)
 
 
 a = suit(186)
 b = coat(45)
-print(a + b + b + a)
+print(a + b)
