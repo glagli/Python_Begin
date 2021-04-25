@@ -31,20 +31,23 @@ class Cell:
     def __init__(self, cell):
         self.cell = cell
 
+    def __str__(self):
+        return f"{self.cell}"
+
     def __add__(self, other):
-        return self.cell + other.cell
+        return Cell(self.cell + other.cell)
 
     def __sub__(self, other):
         if self.cell - other.cell > 0:
-            return self.cell - other.cell
+            return Cell(self.cell - other.cell)
         else:
             return 'разность количества ячеек двух клеток меньще нуля'
 
     def __mul__(self, other):
-        return self.cell * other.cell
+        return Cell(self.cell * other.cell)
 
     def __floordiv__(self, other):
-        return round(self.cell // other.cell)
+        return Cell(round(self.cell // other.cell))
 
     def make_order(self, row):
         result = ''
@@ -56,7 +59,7 @@ class Cell:
 
 cell_1 = Cell(randint(1, 25))
 cell_2 = Cell(randint(1, 25))
-print(f'Ячеек в первой клетке: {cell_1.cell}\nЯчеек во второй клетке: {cell_2.cell}\n')
+print(f'Ячеек в первой клетке: {cell_1}\nЯчеек во второй клетке: {cell_2}\n')
 print(
     f'Объединение двух клеток: {cell_1 + cell_2}\nВычитание клеток: {cell_1 - cell_2}\nУмножение клеток:'
     f' {cell_1 * cell_2}\nЦелочисленное деление клеток: {cell_1 // cell_2}\n'
