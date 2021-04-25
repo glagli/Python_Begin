@@ -65,5 +65,5 @@ print(
     f' {cell_1 * cell_2}\nЦелочисленное деление клеток: {cell_1 // cell_2}\n'
 )
 
-num = randint(1,7)
+num = randint(1, 7)
 print(f'реализация метода make_order с параметром row = {num}:\n{cell_1.make_order(num)}')
